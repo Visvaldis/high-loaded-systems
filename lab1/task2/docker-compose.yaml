@@ -1,0 +1,15 @@
+version: "2"
+services:
+  node:
+    image: node:8
+    volumes:
+      - "./data:/data"
+    working_dir: /data
+    expose:
+      - 3030:3030
+      - 3031:3031
+    command: >
+      bash -c "npm i lite-server
+      && npm run dev"
+
+        
