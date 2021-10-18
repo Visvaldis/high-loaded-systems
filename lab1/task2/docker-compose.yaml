@@ -5,9 +5,9 @@ services:
     volumes:
       - "./data:/data"
     working_dir: /data
-    expose:
-      - 3030:3030
-      - 3031:3031
+    ports:
+      - 8000:8000
+      - 3001:3001
     command: >
       bash -c "npm i lite-server
       && npm run dev"

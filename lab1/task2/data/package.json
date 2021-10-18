@@ -2,7 +2,7 @@
   "name": "task2",
   "version": "1.0.0",
   "scripts": {
-    "dev": "lite-server"
+    "dev": "lite-server -c bs-config.json"
   },
   "dependencies": {
     "lite-server": "^2.6.1"
