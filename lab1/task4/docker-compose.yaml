@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+    
+  db:
+    image: node:12
+    volumes:
+      - "./db:/db"
+    working_dir: /db
+    expose:
+      - 6000
+    command: >
+      bash -c "npm install -g json-server
+      && json-server -H 0.0.0.0 -p 3000 -w db.json"
+
+  lite_server:
+    image: node:12
+    volumes:
+      - "./server:/server"
+    working_dir: /server
+    expose:
+      - 3000
+    command: >
+      bash -c "npm i lite-server
+      && npm run dev"
+
+  nginx:
+    image: nginx
+    volumes:
+      - "./config:/etc/nginx"
+    ports:
+      - "3000:3000"
+      - "8000:6000"
+    environment:
+      - NGINX_HOST=0.0.0.0
+      - NGINX_PORT=80
+    links: 
+      - db
+      - lite_server
+
+
