@@ -1,0 +1,34 @@
+
+version: '3'
+
+services:
+
+  shard2serv1:
+    image: mongo
+    command: mongod --shardsvr --replSet shard2rs --port 27017 --dbpath /data/db
+    ports:
+      - 20201:27017
+    volumes:
+      - shard2serv1:/data/db
+
+  shard2serv2:
+    image: mongo
+    command: mongod --shardsvr --replSet shard2rs --port 27017 --dbpath /data/db
+    ports:
+      - 20202:27017
+    volumes:
+      - shard2serv2:/data/db
+
+  shard2serv3:
+    image: mongo
+    command: mongod --shardsvr --replSet shard2rs --port 27017 --dbpath /data/db
+    ports:
+      - 20203:27017
+    volumes:
+      - shard2serv3:/data/db
+
+volumes:
+  shard2serv1: {}
+  shard2serv2: {}
+  shard2serv3: {}
+
