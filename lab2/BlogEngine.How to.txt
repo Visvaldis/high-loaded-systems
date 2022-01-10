@@ -1,0 +1,15 @@
+Here is the link to video on installation BlogEngine
+https://www.bing.com/videos/search?q=blogengine.net+how+to+install&&view=detail&mid=BAD8ABAB0B8E1E0BCA98BAD8ABAB0B8E1E0BCA98&&FORM=VRDGAR
+
+Solution:
+Config Error: This configuration section cannot be used at this path
+https://stackoverflow.com/questions/9794985/config-error-this-configuration-section-cannot-be-used-at-this-path
+
+
+Enabling multiuser mode
+web.config
+  <appSettings>
+    <!-- Override default application settings here -->
+    <!-- blog usage scenario: singleblog, multiusers or multiblogs -->
+    <add key="BlogEngine.UsageScenario" value="multiusers" />
+  </appSettings>

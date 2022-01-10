@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<post>
+  <author>editor</author>
+  <title>Post  773 of 1000 || 22:56:20</title>
+  <description>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi molliti</description>
+  <content>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi molliti</content>
+  <ispublished>True</ispublished>
+  <isdeleted>False</isdeleted>
+  <iscommentsenabled>True</iscommentsenabled>
+  <pubDate>2022-01-04 15:47:00</pubDate>
+  <lastModified>2022-01-09 20:58:04</lastModified>
+  <raters>0</raters>
+  <rating>0</rating>
+  <slug>post773Of1000_22_5620</slug>
+  <tags />
+  <comments>
+    <comment id="7b0d443a-4e9d-485b-9b21-42f2e6be2150" parentid="00000000-0000-0000-0000-000000000000" approved="True" spam="False" deleted="False">
+      <date>2022-01-09 21:27:39</date>
+      <author>Ilya</author>
+      <email>ilya@mail.com</email>
+      <country />
+      <ip>127.0.0.1</ip>
+      <moderatedby>Rule:authenticated</moderatedby>
+      <avatar />
+      <content>Thats awesome!</content>
+    </comment>
+  </comments>
+  <categories />
+  <notifications />
+</post>

@@ -1,0 +1,14 @@
+<Users>
+  <User>
+    <UserName>Admin</UserName>
+    <Password>jGl25bVBBBW96Qi9Te4V37Fnqchz/Eu4qB9vKrRIqRg=</Password>
+    <Email>post@example.com</Email>
+    <LastLoginTime>2007-12-05 20:46:40</LastLoginTime>
+  </User>
+  <User>
+    <UserName>editor</UserName>
+    <Password>FVPMYv8kYETGg6YeID5lVBmQ5/zUr5RD0iuVV+zJrFQ=</Password>
+    <Email>editor@editor.editor</Email>
+    <LastLoginTime>2022-01-09 22:38:49</LastLoginTime>
+  </User>
+</Users>
