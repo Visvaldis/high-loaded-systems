@@ -89,3 +89,16 @@ export function camelize(str) {
     .replace(':','_')
     ;
   }
+
+export function probability(n = 0.5) { // n -- true percentage
+    return Math.random() <= n;
+};
+
+export function weightedProbability(spec) {
+    var i, sum = 0,
+       r = Math.random();
+    for (i in spec) {
+       sum += spec[i];
+       if (r <= sum) return +i;
+    }
+ }

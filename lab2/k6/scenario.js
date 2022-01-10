@@ -28,7 +28,7 @@ export function leaveComment(postUrl){
       
     }   
 
-    const comment = http.post(`http://localhost${postUrl}`, data, authheader);
+    const comment = http.post(`${postUrl}`, data, authheader);
     check(comment, {
       'comment status is 200': (r) => r.status === 200,
     });
@@ -42,7 +42,7 @@ export function getRandomPage(body){
             let last = doc.find('li.PagerLink').last().prev().children().first().html();
 
             let page = utils.randomFromInterval(first, last);
-            console.log("page num ", page);
+         //   console.log("page num ", page);
             const randomPage = http.get(`http://localhost/blog/?page=${page}`);
             
             return parseHTML(randomPage.body)
@@ -54,12 +54,42 @@ export function getRandomPage(body){
 export function openPost(doc, random, leaveComment){
    
     let postsOnPage = doc.find('div.posts').children().toArray();
+    if(postsOnPage.length == 0) {
+    //    console.log("no posts!");
+        return;
+    }
     let post = random? randomItem(postsOnPage): postsOnPage[0];
  
     let postUrl = post.children().first().children().first().children().first().attr("href");
     let postTitle = post.children().first().children().first().children().first().html();
     const openPost = http.get(`http://localhost${postUrl}`);
-    console.log(postUrl);
+    //console.log(postUrl);
+
+    check(openPost, {
+      'openPost status is 200': (r) => r.status === 200,
+      'post page response body': (r) => r.body.indexOf(postTitle) !== -1,
+    });
+
+
+    //LEAVE COMMENT
+    if(leaveComment)
+      scripts.leaveComment(`http://localhost${postUrl}`);
+    
+}
+
+
+export function openPostForSearchPage(doc, random, leaveComment){
+
+    let postsOnPage = doc.find('div.searchresult').toArray();
+    if(postsOnPage.length == 0) {
+   //     console.log("no posts!");
+        return;
+    }
+    let post = random? randomItem(postsOnPage): postsOnPage[0];
+ 
+    let postUrl = post.children().first().attr("href");
+    let postTitle = post.children().first().html();
+    const openPost = http.get(`${postUrl}`);
 
     check(openPost, {
       'openPost status is 200': (r) => r.status === 200,
@@ -70,5 +100,28 @@ export function openPost(doc, random, leaveComment){
     //LEAVE COMMENT
     if(leaveComment)
       scripts.leaveComment(postUrl);
-    
+}
+
+export function openPostForLargeCalendar(doc, random, leaveComment){
+
+    let postsOnPage = doc.find('td.other').has('a').toArray();
+    if(postsOnPage.length == 0) {
+    //    console.log("no posts!");
+        return;
+    }
+    let post = random? randomItem(postsOnPage): postsOnPage[0];
+ 
+    let postUrl = post.children().first().attr("href");
+    let postTitle = post.children().first().html().replace("<br/>",'').replace("<br/>",'');
+    const openPost = http.get(`http://localhost${postUrl}`);
+
+    check(openPost, {
+      'openPost status is 200': (r) => r.status === 200,
+      'post page response body': (r) => r.body.indexOf(postTitle) !== -1,
+    });
+
+
+    //LEAVE COMMENT
+    if(leaveComment)
+      scripts.leaveComment(`http://localhost${postUrl}`);
 }
