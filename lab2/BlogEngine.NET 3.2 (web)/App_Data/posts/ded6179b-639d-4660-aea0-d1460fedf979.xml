@@ -7,13 +7,24 @@
   <ispublished>True</ispublished>
   <isdeleted>False</isdeleted>
   <iscommentsenabled>True</iscommentsenabled>
-  <pubDate>2021-03-28 15:49:00</pubDate>
-  <lastModified>2022-01-09 20:57:35</lastModified>
+  <pubDate>2021-03-28 12:49:00</pubDate>
+  <lastModified>2022-01-09 18:57:35</lastModified>
   <raters>0</raters>
   <rating>0</rating>
   <slug>post548Of1000_22_5620</slug>
   <tags />
-  <comments />
+  <comments>
+    <comment id="b12dc9cb-928b-4b1a-9775-f95546965088" parentid="00000000-0000-0000-0000-000000000000" approved="True" spam="False" deleted="False">
+      <date>2022-01-10 11:16:07</date>
+      <author>Jonny</author>
+      <email>jon.ny@mail.com</email>
+      <country />
+      <ip>127.0.0.1</ip>
+      <moderatedby>Rule:authenticated</moderatedby>
+      <avatar />
+      <content>Maaaan, thats rocks!</content>
+    </comment>
+  </comments>
   <categories />
   <notifications />
 </post>
