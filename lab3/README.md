@@ -1,5 +1,7 @@
 # Building MongoDB Environment
 
+### Note:
+Please see **HOW_TO_RUN.md** for decription how run tasks
 
  ## Infrastructure:
 
