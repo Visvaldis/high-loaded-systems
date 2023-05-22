@@ -8,7 +8,7 @@
 
 1. Install virtual machine with Windows 10 or MS Windows Server 2016 
 2. Install web-site BlogEngine.Net  [https://drive.google.com/file/d/1kUrkPlldjVrGskRWbvJNu1Q6sJ54sIPV/view?usp=sharing](https://drive.google.com/file/d/1kUrkPlldjVrGskRWbvJNu1Q6sJ54sIPV/view?usp=sharing)
-3. Install JMeter 
+3. Install [K6](https://k6.io/) 
 
 
 ## Task 1. Simple script 
