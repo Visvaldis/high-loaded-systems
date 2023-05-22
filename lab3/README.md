@@ -140,7 +140,7 @@ Goals:
 * Become experience with mongo map-reduce operations
 
 
-## Task 5. Visualize data (bonus task)
+## Task 5. Visualize data
 
 _Prerequisites:_
 
