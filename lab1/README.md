@@ -2,20 +2,18 @@
 
 # Building Docker Environment
 
+## Infrastructure:
 
-  Infrastructure:
 
-    Task 1. Hello-world
+1. Hello-world
 
-    Task 2.  Lite-server
+2.  Lite-server
 
-    Task 3. JSON-server
+3. JSON-server
 
-    Task 4. Nginx + Lite-server’s + JSON-server’s
+4. Nginx + Lite-server’s + JSON-server’s
 
-    Task 5. Postman
-
-    Report
+5. Postman
 
 
 ## Task 1. Hello-world
